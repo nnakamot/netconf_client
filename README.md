@@ -8,47 +8,81 @@ It can be used either one-line-command type of tool, or shell-like interactive t
   - netconf_client_lib.py must be in python path or placed together with netconf_client.py
 
 [Usage]
+
 Usage: netconf_client.py [options]
 
 Options:
+
   -h, --help           show this help message and exit
+  
   --host=HOST          IP address to connect to
+  
   --port=PORT          Port number that NETCONF agent listens
+
   --device=DEVICE      Connecting device type (default: iosxr)
+  
   --user=USER          User name to login
+  
   --passwd=PASSWD      Password for user login
+  
   --debug              Turn on debug print
+  
   --log=LOG            File to save operation log
+  
   --request=REQUEST    File to provide a request to send
+  
   --response=RESPONSE  File to save the response message
+  
   --dump               Turn on terminal output
 
 [One-line Command Execution Mode]
+
 - Run the script with '--request' (i.e. specifying a netconf request to run) will run the script as one-liner
+
    Ex.
-     netconf_client.py --host=HOST --user=USER --request <path-to-your-request-file> 
+   
+     netconf_client.py --host=HOST --user=USER --request <path-to-your-request-file>
+     
      Enter password: 
+     
 
     --------------- Sent to NETCONF agent ----------------
+    
         <get-config>
+        
             <source>
+            
                 <running/>
+                
             </source>
+            
          </get-config>
+         
 
     ------------------------------------------------------
+    
 
     ----------- Received from NETCONF agent --------------
+    
     <?xml version="1.0" encoding="UTF-8"?><data xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    
       <host-names xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-shellutil-cfg">
+      
           <host-name>ThisIsTheRouter</host-name>
+          
       </host-names>
+      
     ...
+    
        </interface>
+       
       </interfaces>
+      
      </data>
+     
 
     ------------------------------------------------------
+    
 
     The response is saved in './netconf_response.txt'
 
