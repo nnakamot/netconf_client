@@ -89,21 +89,31 @@ Options:
     The operation log is saved in './netconf_client_log.txt'
     
 [Interactive Mode]
+
 - Run the script without '--request' and shell-like client menu starts
+
    Ex.
+   
      # netconf_client.py --host=HOST --user=USER --dump
+     
      Enter password: 
 
      Hello. You have connected to NETCONF agent.
 
      Type 'help' or '?' to see the available commands
+     
      netconf> help
 
      Type 'help <command>' to see the help for each command:
+     
      -------------------------------------------------------
+     
      EOF      commit    exit              get_cfg_filter   help        
+     
      bye      discard   get_capabilities  get_filter       quit        
+     
      comment  edit_cfg  get_cfg_all       get_schema_list  send_request
+     
 
      netconf> 
 
