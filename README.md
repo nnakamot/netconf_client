@@ -92,6 +92,8 @@ Options:
 
 - Run the script without '--request' and shell-like client menu starts
 
+- The shell-like menu supports command completion with tab key and command history with arrow keys
+
    Ex.
    
      # netconf_client.py --host=HOST --user=USER --dump
@@ -116,5 +118,6 @@ Options:
      
 
      netconf> 
-
+ 
+ 
 Note: <rpc> tags are not needed in the netconf request you specify
